@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+
+:root {
+  --primary-color: #181818;
+  --secondary-color: #5C5470;
+  --tertiary-color: #B9B4C7;
+  --font-color: #FAF0E6; 
+}
+
+.main{
+  position: fixed;
+  background-color: var(--primary-color); 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  z-index: 10; 
+  animation: fadeOutMain 1s ease-out 3s forwards;
+}
+
+.title {
+  font-size: 7rem;
+  background: linear-gradient(90deg, #FBF9F1, #92C7CF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 3px;
+  font-weight: 600;
+  opacity: 1;
+  transform: scale(1); 
+  animation: fadeInZoom 1s ease-in-out, fadeOutZoom 1s ease-out 2s forwards;
+}
+
+.teamlogo {
+  width: 40px; /* Adjust based on your logo size */
+  height: 40px;
+  background: linear-gradient(90deg, #FBF9F1, #92C7CF); /* Same gradient as title */
+  -webkit-mask-image: url('../images/masbroologo.png'); /* Use logo as mask */
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-image: url('../images/masbroologo.png'); /* Standard mask property */
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  animation: fadeOutZoom 1s ease-out 2s forwards;
+  transform: scale(1); 
+  opacity: 1;
+}
+
+.subtitle{
+
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.548);
+  font-size: 1em;
+  animation: fadeOutZoom 1s ease-out 2s forwards;
+  transform: scale(1); 
+  opacity: 1;
+}
+
+/* Keyframes */
+@keyframes fadeInZoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeOutZoom {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+
+@keyframes fadeOutMain {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    /* display: none; */
+  }
+}

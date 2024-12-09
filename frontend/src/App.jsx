@@ -1,33 +1,21 @@
-
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './Components/Navbar';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Navbar from "./Components/Navbar";
 import TestFetchData from "./pages/TestFetchData";
-import Home from "./pages/Home"
+import Home from "./pages/Home";
+import WelcomeScreen from "./components/WelcomeScreen";
 
 function App() {
- 
-
   return (
-    
-<Router>
-   <div>
-  <Navbar />
-<Routes>
-
-  <Route path='/' element={<Home/>} />
-  <Route path='/testFetch' element={<TestFetchData/>} />
-  
-
-</Routes>
-
- 
-  </div>
-</Router>
-
-     
-
-
-    
+    <Router>
+      <div>
+        <WelcomeScreen/> 
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/testFetch" element={<TestFetchData />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
