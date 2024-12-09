@@ -10,9 +10,6 @@ function Navbar() {
           <Link to="/" className="text-white">Home</Link>
         </li>
       
-        <li>
-          <Link to="/testFetch" className="text-white">Test Fetch Data</Link>
-        </li>
       </ul>
     </nav>
   );
